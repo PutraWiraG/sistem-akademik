@@ -23,7 +23,7 @@
                       </div>
                       <div class="col-md-8">
                         <div class="card-body">
-                          <h5 class="card-title">Login</h5>
+                          <h4 class="card-title">Login Student</h4>
                           <hr>
                           {{-- form Input --}}
                           <div class="row">

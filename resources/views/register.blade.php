@@ -26,17 +26,28 @@
                           <h5 class="card-title">Register</h5>
                           <hr>
                           {{-- form Input --}}
+                          @if ($errors->any())
+                              <div class="alert alert-danger">
+                                <ul>
+                                  @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                  @endforeach
+                                </ul>
+                              </div>
+                          @endif
+                          <form action="{{ route('account.post') }}" method="post">
+                          @csrf
                           <div class="row">
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputName" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="exampleInputName">
+                                    <input type="text" class="form-control" name="name" id="exampleInputName">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputTelp" class="form-label">No. Telp</label>
-                                    <input type="text" class="form-control" id="exampleInputTelp">
+                                    <input type="text" class="form-control" name="telp" id="exampleInputTelp">
                                 </div>
                             </div>
                           </div>
@@ -44,7 +55,7 @@
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputAddress" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="exampleInputAddress">
+                                    <input type="text" class="form-control" name="address" id="exampleInputAddress">
                                 </div>
                             </div>
                           </div>
@@ -52,19 +63,19 @@
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1">
+                                    <input type="email" class="form-control" name="email" id="exampleInputEmail1">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mb-3">
                                     <label for="exampleInputPassword" class="form-label">Password</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword">
+                                    <input type="password" class="form-control" name="password" id="exampleInputPassword">
                                 </div>
                             </div>
                           </div>
-                          
+                          <button class="btn btn-primary" type="submit">Register</button>
+                          </form>
                           {{-- Akhir Form Input --}}
-                          <button class="btn btn-primary">Register</button>
                           <p class="mt-2">already have an account? <a href="/login">Login</a></p>
                         </div>
                       </div>

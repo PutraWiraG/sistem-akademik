@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-primary shadow-sm" data-bs-theme="dark">
     <div class="container">
         <a class="navbar-brand" href="#">Latahzan Edu</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

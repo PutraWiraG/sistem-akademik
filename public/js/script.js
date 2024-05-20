@@ -32,3 +32,10 @@ function checkActive() {
     list[3].classList.remove("active");
   }
 }
+
+
+// Page Student
+// let btnEdit = document.querySelector('.btn-edit');
+// btnEdit.addEventListener("click", () => {
+//   alert('coba')
+// })
